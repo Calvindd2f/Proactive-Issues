@@ -2,7 +2,6 @@
       # and by that I mean convert to aio powershell script
       
 
-[Protections]
 
 
 TurnOnUserAccountControlUAC
