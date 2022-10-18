@@ -107,6 +107,7 @@ TurnOffJavaScriptAdobeReader
 TurnOnProtectedViewAdobeReader
 TurnOffOpeningNonPDFFilesAdobeReader
 TurnOnEnhancedSecurityAdobeReader
+
 TurnOnCheckUpdatesStartupAdobeReader
 TurnOffMacrosMicrosoftOffice
 TurnOffDDEAUTOMicrosoftOffice
