@@ -129,3 +129,29 @@
 
 
 + Printers
+    1. PS C:\Users\calvin> printers -complex
+
+            Name                            Drivername                          Portname
+            ----                            ----------                          --------
+            OneNote (Desktop)               Send to Microsoft OneNote 16 Driver nul:
+            OneNote for Windows 10          Microsoft Software Printer Driver   Microsoft.Office.OneNote_16001.14326.21146.0_x6...
+            HP DeskJet 4100 series [833A14] Microsoft IPP Class Driver          WSD-9aafdf00-8259-4dbb-b26b-9089a587eab2
+
+
+    1. PS C:\Users\calvin> printers -complex | select Name,Drivername,Portname,CapabilityDescriptions | fl
+
+            Name                   : OneNote (Desktop)
+            Drivername             : Send to Microsoft OneNote 16 Driver
+            Portname               : nul:
+            CapabilityDescriptions : {Copies, Color}
+
+            Name                   : OneNote for Windows 10
+            Drivername             : Microsoft Software Printer Driver
+            Portname               : Microsoft.Office.OneNote_16001.14326.21146.0_x64__8wekyb3d8bbwe_microsoft.onenoteim_S-1-5-21-
+                                     381010597-2320458538-1618506993-1001
+            CapabilityDescriptions : {Copies, Color}
+
+            Name                   : HP DeskJet 4100 series [833A14]
+            Drivername             : Microsoft IPP Class Driver
+            Portname               : WSD-9aafdf00-8259-4dbb-b26b-9089a587eab2
+            CapabilityDescriptions : {Copies, Color, Collate}
