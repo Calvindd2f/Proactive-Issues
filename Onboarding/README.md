@@ -155,3 +155,33 @@
             Drivername             : Microsoft IPP Class Driver
             Portname               : WSD-9aafdf00-8259-4dbb-b26b-9089a587eab2
             CapabilityDescriptions : {Copies, Color, Collate}
+
+
+
+
+
+    1. rundll32 printui.dll PrintUIEntry /?
+    2. *can save agony that printers cause
+    3. 
+          *Store all printer settings into a file: 
+            
+            rundll32 printui.dll,PrintUIEntry /Ss /n "printer" /a "file.dat"
+
+          *Restore all printer settings from a file: 
+
+            rundll32 printui.dll,PrintUIEntry /Sr /n "printer" /a "file.dat"
+
+          *GUI open Printer settings
+
+            rundll32 printui.dll,PrintUIEntry /y /n "printer"
+
+          *Set printer as default: 
+
+            rundll32 printui.dll,PrintUIEntry /y /n "printer"
+
+          *Output config into text file
+
+            rundll32 printui.dll,PrintUIEntry /f "results.txt" /Xg /n "HP DeskJet 4100 series [833A14] (redirected 2)"
+            
+            
+            
