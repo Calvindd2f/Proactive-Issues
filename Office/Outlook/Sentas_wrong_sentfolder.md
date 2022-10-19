@@ -1,7 +1,7 @@
-    I have a user(call him user A) who has Send As and Read and Manage rights on another users mailbox(Call him user B). 
-    When User A sends an email as User B, the message does not save in the sent folder of User B, but instead saves in User A's sent folder. 
-    
-    + I need to have these sent messages save in user B's sent folder.
+I have a user(call him user A) who has Send As and Read and Manage rights on another users mailbox(Call him user B). 
+When User A sends an email as User B, the message does not save in the sent folder of User B, but instead saves in User A's sent folder. 
+
++ I need to have these sent messages save in user B's sent folder.
     
     
       PS: C:\> ipmo exchangeonlinemanagement
@@ -10,4 +10,5 @@
       PS C:> Disconnect-ExchangeOnline
       
       
-      Can also be done for 'Send on behalf of
++Can also be done for 'Send on behalf of.
++UserB in this scenario ; is a user mailbox that has been delegated and not a shard mailbox
