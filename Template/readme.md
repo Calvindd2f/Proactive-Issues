@@ -21,14 +21,14 @@ The idea of these is for a response. It's in your best interest to create these 
 
 
   # Outlook / Unsolicited Message Response . (Save as Outlook Template)
-      "Hello, I am sorry policy does not allow us to respond to direct emails requesting IT support. 
+      Hello, I am sorry policy does not allow us to respond to direct emails requesting IT support. 
       Please submit a ticket here and we'll get to this as soon as possible: 
       [link to ticketing system]
       or
-      [ mailto:create@a.ticket ]"
+      [ mailto:create@a.ticket ]
 
 
-      "Please submit a ticket so that IT has proper documentation to track issues."
+      Please submit a ticket so that IT has proper documentation to track issues.
       
   # Alternative of above (informal) Unsolicited Message Response
   
@@ -43,9 +43,9 @@ The idea of these is for a response. It's in your best interest to create these 
     
   # Follow Up
   
-      "Hi, I just want to check in and see if you are still experiencing this issue?"
+      Hi, I just want to check in and see if you are still experiencing this issue?
 
   # Scheduling a remote support session.
   
-      "Good Afternoon, I wanted to see if we can schedule a time to go over the issues reported in ticket 00000.
-       Could you let me know when would be a good time we can do a remote session? This should take about xx-yy minutes."
+      Good Afternoon, I wanted to see if we can schedule a time to go over the issues reported in ticket 00000.
+      Could you let me know when would be a good time we can do a remote session? This should take about xx-yy minutes.
