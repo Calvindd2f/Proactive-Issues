@@ -16,12 +16,15 @@ Filler
 
 
   # Outlook / Unsolicited Message Response . (Save as Outlook Template)
-      Hello, I am sorry policy does not allow us to respond to direct emails requesting IT support. 
+      "Hello, I am sorry policy does not allow us to respond to direct emails requesting IT support. 
       Please submit a ticket here and we'll get to this as soon as possible: 
       [link to ticketing system]
       or
-      [ mailto:create@a.ticket ]
+      [ mailto:create@a.ticket ]"
 
+
+      "Please submit a ticket so that IT has proper documentation to track issues."
+      
   # Alternative of above (informal) Unsolicited Message Response
   
     Sorry for the late response, I was away from my desk and didn't see your email until now. 
