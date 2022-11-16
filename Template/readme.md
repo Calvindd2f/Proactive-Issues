@@ -21,3 +21,8 @@ Filler
       [link to ticketing system]
       or
       [ mailto:create@a.ticket ]
+
+  # Alternative of above (informal) Unsolicited Message Response
+  
+    Sorry for the late response, I was away from my desk and didn't see your email until now. 
+    The support request form reaches all members of our department and will result in much faster resolution.
