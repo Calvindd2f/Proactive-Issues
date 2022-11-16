@@ -49,3 +49,22 @@ The idea of these is for a response. It's in your best interest to create these 
   
       Good Afternoon, I wanted to see if we can schedule a time to go over the issues reported in ticket 00000.
       Could you let me know when would be a good time we can do a remote session? This should take about xx-yy minutes.
+      
+  # Ticket Received Notification per SLA
+  
+      Blah Blah Blah generic 'we received your ticket notification'
+      
+      Please note our target response time for non-emergency issues is { SLA defines this value } business hour(s) (8:00-5:30/M-F), please plan accordingly.
+      
+The template above will need to be created ForEach SLA. An example explaining what I mean is below
+
+    SLA + ( 4 hour response time )
+    
+    Please note our target response time for non-emergency issues is 4 business hour(s) (8:00-5:30/M-F), please plan accordingly.
+    
+Second Variant
+
+    SLA +++ ( 1 hour response time )
+    
+    Please note our target response time for non-emergency issues is 1 business hour (8:00-5:30/M-F), please plan accordingly.
+
