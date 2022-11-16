@@ -29,3 +29,9 @@ Filler
   
     Sorry for the late response, I was away from my desk and didn't see your email until now. 
     The support request form reaches all members of our department and will result in much faster resolution.
+
+
+  # Ticket Closed
+    "Ticket Closed"
+    
+    *this will closed off a ticket with all predefined fields filled ; varies system to system*
