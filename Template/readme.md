@@ -68,3 +68,10 @@ Second Variant
     
     Please note our target response time for non-emergency issues is 1 business hour (8:00-5:30/M-F), please plan accordingly.
 
+
+# Third Party Software
+
+    
+
+
+# EOL Hardware
