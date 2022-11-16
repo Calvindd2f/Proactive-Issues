@@ -2,8 +2,13 @@
 
 
 
-Filler
+The idea of these is for a response. It's in your best interest to create these yourself, copy pasting the response and automating predefinted fields.
 
+*For example. 
+
++1 *Ticket Closed = Sends Contact msg with copy paste template ; sets status to closed ; fills an other fields as required.
+
++2 *Follow Up = Sends contact copy paste msg ; sets status to Waiting on response ; done
 
 
 
@@ -35,3 +40,12 @@ Filler
     "Ticket Closed"
     
     *this will closed off a ticket with all predefined fields filled ; varies system to system*
+    
+  # Follow Up
+  
+      "Hi, I just want to check in and see if you are still experiencing this issue?"
+
+  # Scheduling a remote support session.
+  
+      "Good Afternoon, I wanted to see if we can schedule a time to go over the issues reported in ticket 00000.
+       Could you let me know when would be a good time we can do a remote session? This should take about xx-yy minutes."
