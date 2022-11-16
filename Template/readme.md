@@ -6,9 +6,9 @@ The idea of these is for a response. It's in your best interest to create these 
 
 *For example. 
 
-+1 *Ticket Closed = Sends Contact msg with copy paste template ; sets status to closed ; fills an other fields as required.
+1.) *Ticket Closed = Sends Contact msg with copy paste template ; sets status to closed ; fills an other fields as required.*
 
-+2 *Follow Up = Sends contact copy paste msg ; sets status to Waiting on response ; done
+2.) *Follow Up = Sends contact copy paste msg ; sets status to Waiting on response ; done*
 
 
 
