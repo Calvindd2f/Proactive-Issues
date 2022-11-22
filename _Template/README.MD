@@ -74,4 +74,4 @@ Second Variant
     
 
 
-# EOL Hardware
+# Access to shared mailbox granted
