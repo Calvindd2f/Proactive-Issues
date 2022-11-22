@@ -75,3 +75,19 @@ Second Variant
 
 
 # Access to shared mailbox granted
+
+# Ticket Closed (Survey Signature)
+
+# Approval Required
+
+# Approved Change - Processing
+
+# Change Complete - TIcket Closed
+
+# Approval Denied
+
+
+
+
+
+# Ticket Closed - No Notification Email (to just fast fill fields and set to closed)
