@@ -87,7 +87,12 @@ Second Variant
 # Approval Denied
 
 
-
-
+-------------------------------------------------------------------------------------------------------------
+# These are not emails to contact ; these are just fast codes to do certain actions quickly
+-------------------------------------------------------------------------------------------------------------
 
 # Ticket Closed - No Notification Email (to just fast fill fields and set to closed)
+
+# Ticket Action - Assign to me ; Set Status to In-progress
+
+# Review Response - Set Status from Responded to in-progress
