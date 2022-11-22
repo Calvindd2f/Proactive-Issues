@@ -1,0 +1,13 @@
+<Configuration>
+  <Add OfficeClientEdition="32" Channel="SemiAnnual" AllowCdnFallback="true">
+    <Product ID="O365ProPlusRetail">
+      <Language ID="en-gb" />
+      <Language ID="ga-ie" />
+      <ExcludeApp ID="Bing" />
+      <ExcludeApp ID="Groove" />
+      <ExcludeApp ID="Lync" />
+      <ExcludeApp ID="Publisher" />
+    </Product>
+  </Add>
+  <Extend CreateShortcuts="true" />
+</Configuration>
