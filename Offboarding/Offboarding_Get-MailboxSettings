@@ -1,5 +1,0 @@
-Get-MailboxSettings:
-Create a function to get the mailbox type (regular or shared)
-===============================================================================
-:Required Permission 
--	MailboxSettings.ReadWrite
