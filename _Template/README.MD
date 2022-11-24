@@ -86,7 +86,20 @@ Second Variant
 
 # Approval Denied
 
+# Granted Temporary Admin for software install
 
+
+      Hello
+      
+      I've ran a script to grant you access to a temporary admin account, it should be active in about 5 minutes. 
+      The admin account will be active for x   hours just in case you are out for lunch. 
+
+      The details are below 
+
+       Username:   .\Username
+       Password:    Password
+       
+       
 -------------------------------------------------------------------------------------------------------------
 # These are not emails to contact ; these are just fast codes to do certain actions quickly
 -------------------------------------------------------------------------------------------------------------
