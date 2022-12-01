@@ -21,10 +21,6 @@ function Use-Printer
     [System.String]
     $printerName = 'Printer2_MFP'
   )
-  
-  # Endpoint sharing printer.
-  # Printer being shared.
-  
   $fullprinterName = '\\' + $serverName + '\' + $printerName + ' - ' + $(If ([Environment]::Is64BitOperatingSystem) {'x64'} Else {'x86'})
   
   Remove-Printer -Name $fullprinterName -ErrorAction SilentlyContinue
