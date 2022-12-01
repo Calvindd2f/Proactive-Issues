@@ -13,22 +13,19 @@ function Install-O365_Modules {
     process {
         foreach ($Module in $Modules){
             if (Get-Module -ListAvailable -Name $Module) {
-                Write-Host "Making sure Module: $Module is up-to-date"
+                Write-Verbose -Message ('Making sure Module: {0} is up-to-date' -f $Module)
                 Update-Module -Name $Module -Confirm
             } else {
-                Write-Host "Installing: $Module"
+                Write-Verbose -Message ('Installing: {0}' -f $Module)
                 Install-Module -Name $Module -Force
             }
             $InstalledModules += (Get-InstalledModule -Name $Module)
-            Write-Host "==========================================================="
-            Write-Host
+            Write-Verbose -Message '==========================================================='
         }
     }
 
     end {
-        $InstalledModules | Select-Object Name,Version,Description
-        Write-Host
-        Write-Host "All O365 modules are installed and up-to-date." -ForegroundColor Green
-        Write-Host
-        Write-Host
+        $InstalledModules | Select-Object -Property Name,Version,Description
+        Write-Verbose -Message 'All O365 modules are installed and up-to-date.'
+    }
     }
