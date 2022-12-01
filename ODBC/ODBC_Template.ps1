@@ -1,33 +1,46 @@
-#Calvin ODBD
+<#
+Calvin ODBD
+Check for the SQL Driver
+#>
 
-#1. Check for the SQL Driver
+function Get-Sqlver
+{
+  param
+  (
+    [Parameter(Mandatory=$true, ValueFromPipeline=$true, HelpMessage='Data to filter')]
+    [Object]$InputObject
+  )
+  process
+  {
+    if ($InputObject.Name -cmatch 'SQL*')
+    {
+      $InputObject
+    }
+  }
+}
 
-$Check =  Get-OdbcDriver | ? { $_.Name -cmatch 'SQL*'}
+$Check =  Get-OdbcDriver | Get-Sqlver
 
 if ($Check -cnotmatch 'SQL') 
 {
-    echo 'Drivers Installed already'
+    Write-Output -InputObject 'Drivers Installed already'
 }
 
 if ($Check -cmatch 'SQL') 
 {
-    echo 'downloading'
-    iwr 'https://go.microsoft.com/fwlink/?linkid=2202930&clcid=0x409' -OutFile $env:TEMP\SQLx64.Driver.msi
-    cd $env:TEMP 
+    Write-Output -InputObject 'downloading'
+    Invoke-WebRequest -Uri 'https://go.microsoft.com/fwlink/?linkid=2202930&clcid=0x409' -OutFile $env:TEMP\SQLx64.Driver.msi
+    Set-Location -Path $env:TEMP 
   & "$env:windir\system32\msiexec.exe" /i .\SQLx64.Driver.msi /quiet
-    echo 'done'
+    Write-Output -InputObject 'done'
 }
 
 
-#2. Add the new DSN
-
+<#
+Add the new DSN
+Disable Perf Counter
+#>
 $NewDsn = Add-OdbcDsn -Name 'Client' -DriverName 'SQL Server Native Client 10.0' -DsnType 'System' -SetPropertyValue @('Server=SQLSERVER', 'Trusted_Connection=Yes', 'Database=Client', 'Description=Client') -PassThru
-
-#3.Disable Perf Counter
-
+Invoke-Command -ScriptBlock $NewDsn
 Disable-OdbcPerfCounter -InputObject
-
-
-#4. End
-
-Echo 'finished without error'
+Write-Output -InputObject 'finished without error'
