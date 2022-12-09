@@ -69,10 +69,107 @@ Second Variant
     Please note our target response time for non-emergency issues is 1 business hour (8:00-5:30/M-F), please plan accordingly.
 
 
-# Third Party Software
+# Third Party Software // Software not supported
 
-    
+    Hello [Recipient],
 
+    We regret to inform you that [software] is not supported by us. We apologize for any inconvenience this may cause.
+
+    If you require assistance with this product, please contact the software's dedicated support staff.
+
+    Thank you for your understanding.
+
+
+# Escalation
+
+    Hello [Name],
+
+    We have received your request and are working to resolve the issue as quickly as possible. 
+    We would like to inform you that we have now escalated the problem to senior support staff.
+
+    Please be assured that we are doing our best to resolve the issue promptly. 
+    We appreciate your patience and understanding and apologize for any inconvenience   caused.
+
+    If you have any further questions or concerns, please contact us.
+
+
+# Write a template email letting user know ticket is closed and asking if they could leave feedback
+
+    Hello {name},
+
+    We wanted to let you know that your ticket has been marked as closed.
+
+    We value your feedback on your experience with us. If you have a few minutes, please tell us what we did well and what we can improve on.
+
+    Thank you for taking the time to contact us. We are always happy to help.
+
+
+# Have you performed basic troubleshooting steps?
+
+    Hello [Name],
+
+    We have received a report that you are experiencing difficulty with [product/service]. 
+    We take reports of this nature seriously and want to make sure that we are able to help you in the best way possible. 
+
+    Before we can begin troubleshooting, we need to make sure that you have performed the basic troubleshooting steps. 
+    This includes [list of steps].
+
+    Please let us know if you have already completed these steps and provide any additional details about the issue you are having. 
+
+    Thank you for your time and we look forward to resolving this issue for you as soon as possible.
+
+
+
+# informing user the issue will take longer than expected
+
+	   Hello [Name],
+
+	   We wanted to provide you an update regarding the [issue] you were having. 
+     Unfortunately, we anticipate that resolving the issue may take longer than we initially anticipated. 
+
+	   We apologize for any inconvenience this may cause. We are doing our best to resolve the issue as quickly as possible and will keep you updated on our progress.
+
+	   If you have any other questions or concerns, please don't hesitate to contact us.
+
+ $ Asking the end user for more context about their issue
+
+
+	  Hello [Name],
+
+	  I'm sorry to hear you're experiencing an issue with [specific issue]. 
+    I understand how frustrating this can be. In order to help resolve the issue, I'll need more information from you.
+
+	  Could you please provide a bit more context about your issue? For example, when does it happen? What have you tried so far?
+
+	  I appreciate your time and look forward to helping you resolve the issue as quickly as possible.
+
+# Send to vendor
+
+	  Hello  [Name],
+
+	  We are sorry to inform you that we have decided to no longer offer [service/product], and have 
+    chosen to partner with [third party vendor] to provide you with the support you need.
+
+	  We believe that [third party vendor] is the best choice to provide you with [service/product]. 
+    You will be able to continue to access the same services and products you have come to rely on, with the added benefit of the expertise and support of [third party vendor].
+
+	  Please take the time to visit [third party vendor] website to learn more about their services. 
+    You can also contact them directly with any questions or concerns you may have.
+
+	  We apologize for any inconvenience this change may cause and thank you for your understanding.
+
+
+#off a customer
+
+    Hello [Name],
+
+    We are sorry to inform you that your account with [Company Name] will be deactivated on [date]. 
+
+    We would like to thank you for your business and the trust you placed in us. 
+    We value the relationship we have created and would like to extend our best wishes for your future endeavors. 
+
+    We would be happy to answer any questions you may have during this process. 
+    Please feel free to contact us at [phone number] or [email address].
 
 # Access to shared mailbox granted
 
