@@ -92,15 +92,104 @@ Next, let's turn on PSRemoting and add the host ending in.80 to our TrustedHosts
 + PSEXEC
 
 
-PsExec1 is part of the Sysinternals2 suite and we can use it to establish remote Windows shells in a variety of ways. To keep this section simple, we'll use PsExec to connect with a remote shell on a system that has open File and Printer Sharing.3
+PsExec1 is part of the Sysinternals2 suite and we can use it to establish remote Windows shells in a variety of ways. 
+To keep this section simple, we'll use PsExec to connect with a remote shell on a system that has open File and Printer Sharing
+
+
+*The PsTools packages are extracted into the System32 directory*
+
+        PS C:\Users\Administrator\Downloads> Expand-Archive -Path .\PSTools.zip -DestinationPath C:\Windows\System32\
+
+
+*The command execution fails due to a logon failure*
+
+        PS C:\Users\offsec> psexec \\192.168.50.80 -u offensive -p security ipconfig
+
+        PsExec v2.34 - Execute processes remotely
+        Copyright (C) 2001-2021 Mark Russinovich
+        Sysinternals - www.sysinternals.com
+
+
+        PsExec could not start ipconfig on 192.168.50.80:
+        Logon failure: the user has not been granted the requested logon type at this computer.
 
 
 
 
+*The remote command executed successfully*
+
+        PS C:\Users\offsec> psexec \\192.168.50.80 -u offensive -p security -i ipconfig
+
+        PsExec v2.34 - Execute processes remotely
+        Copyright (C) 2001-2021 Mark Russinovich
+        Sysinternals - www.sysinternals.com
+
+        Windows IP Configuration
+
+        Ethernet adapter Ethernet0:
+
+       Connection-specific DNS Suffix  . :
+       IPv4 Address. . . . . . . . . . . : 192.168.50.80
+       Subnet Mask . . . . . . . . . . . : 255.255.255.0
+       Default Gateway . . . . . . . . . : 192.168.50.254
+        ipconfig exited on 192.168.50.80 with error code 0.
+
+*A command prompt shell is opened on the remote host*
+
+        PS C:\Users\offsec> psexec \\192.168.50.80 -u offensive -p security -i cmd
+
+        PsExec v2.34 - Execute processes remotely
+        Copyright (C) 2001-2021 Mark Russinovich
+        Sysinternals - www.sysinternals.com
+
+        Microsoft Windows [Version 10.0.19044.1415]
+        (c) Microsoft Corporation. All rights reserved.
+
+        C:\WINDOWS\system32>
 
 
 
 
++ EvilWinRM
+
+Evil-WinRM1 is a feature-rich tool used to establish remote shells using Microsoft's implementation of the WS-Management2 protocol, WinRM.3 Just like our PowerShell shell, the remote host must be configured for PSRemoting and WinRM that runs on port 5985 by default.
 
 
+*The usage for evil-winrm is displayed*
 
+        offensive@linuxshells:~/evil-winrm$ ./evil-winrm.rb
+
+        Evil-WinRM shell v3.3
+
+        Error: missing argument: ip, user
+
+        Usage: evil-winrm -i IP -u USER [-s SCRIPTS_PATH] [-e EXES_PATH] [-P PORT] [-p PASS] [-H HASH] [-U URL] [-S] [-c PUBLIC_KEY_PATH ] [-k PRIVATE_KEY_PATH ] [-r REALM] [--spn SPN_PREFIX] [-l]
+    -S, --ssl                        Enable ssl
+    -c, --pub-key PUBLIC_KEY_PATH    Local path to public key certificate
+    -k, --priv-key PRIVATE_KEY_PATH  Local path to private key certificate
+    -r, --realm DOMAIN               Kerberos auth, it has to be set also in /etc/krb5.conf file using this format -> CONTOSO.COM = { kdc = fooserver.contoso.com }
+    -s, --scripts PS_SCRIPTS_PATH    Powershell scripts local path
+        --spn SPN_PREFIX             SPN prefix for Kerberos auth (default HTTP)
+    -e, --executables EXES_PATH      C# executables local path
+    -i, --ip IP                      Remote host IP or hostname. FQDN for Kerberos auth (required)
+    -U, --url URL                    Remote url endpoint (default /wsman)
+    -u, --user USER                  Username (required if not using kerberos)
+    -p, --password PASS              Password
+    -H, --hash HASH                  NTHash
+    -P, --port PORT                  Remote host port (default 5985)
+    -V, --version                    Show version
+    -n, --no-colors                  Disable colors
+    -N, --no-rpath-completion        Disable remote path completion
+    -l, --log                        Log the WinRM session
+    -h, --help                       Display this help message
+
+*Listing 55 - The remote shell with evil-winrm is established*
+
+
+        offensive@linuxshells:~/evil-winrm$ ./evil-winrm.rb -i 192.168.50.80 -u offensive -p security
+
+        Evil-WinRM shell v3.3
+
+        Info: Establishing connection to remote endpoint
+
+        *Evil-WinRM* PS C:\Users\offensive\Documents>
