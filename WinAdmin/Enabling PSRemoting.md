@@ -2,7 +2,15 @@
 2.  Use psexec
 3.  Use evil-winrm
 
-Let's cover some PowerShell Cmdlets2 we can use to remotely execute commands and also gain a remote shell. These cmdlets are Invoke-Command3 and Enter-PSSession.4 Before we can use these, however, some conditions need to be met on both Windows hosts.
+
+
+
+
++ Remote shells with PowerShell
+
+
+
+Let's cover some PowerShell Cmdlets we can use to remotely execute commands and also gain a remote shell. These cmdlets are Invoke-Command3 and Enter-PSSession.4 Before we can use these, however, some conditions need to be met on both Windows hosts.
 
 
 The first of these conditions is that the remote host must have PSRemoting5 enabled. The Web Services for Management (WSMan) provider also needs a TrustedHosts entry. The client host used to set up the connection must also meet these conditions. We've already set up the Windows host whose number ends in.80, but we still need to set up these conditions on the client whose number ends in.79.
@@ -74,8 +82,25 @@ Next, let's turn on PSRemoting and add the host ending in.80 to our TrustedHosts
      Default Gateway . . . . . . . . . : 192.168.50.254
      
    
-*Entering a Remote Shell Session
+*Entering a Remote Shell Session*
 
     PS C:\WINDOWS\system32> Enter-PSSession -ComputerName 192.168.50.80 -Credential offensive
 
     [192.168.50.80]: PS C:\Users\offensive\Documents> ipconfig
+
+
++ PSEXEC
+
+
+PsExec1 is part of the Sysinternals2 suite and we can use it to establish remote Windows shells in a variety of ways. To keep this section simple, we'll use PsExec to connect with a remote shell on a system that has open File and Printer Sharing.3
+
+
+
+
+
+
+
+
+
+
+
