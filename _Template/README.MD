@@ -131,7 +131,7 @@ Second Variant
 
 	   If you have any other questions or concerns, please don't hesitate to contact us.
 
- $ Asking the end user for more context about their issue
+ # Asking the end user for more context about their issue
 
 
 	  Hello [Name],
