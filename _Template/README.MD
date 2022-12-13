@@ -125,9 +125,10 @@ Second Variant
 	   Hello [Name],
 
 	   We wanted to provide you an update regarding the [issue] you were having. 
-     Unfortunately, we anticipate that resolving the issue may take longer than we initially anticipated. 
+	   Unfortunately, we anticipate that resolving the issue may take longer than we initially anticipated. 
 
-	   We apologize for any inconvenience this may cause. We are doing our best to resolve the issue as quickly as possible and will keep you updated on our progress.
+	   We apologize for any inconvenience this may cause. 
+	   We are doing our best to resolve the issue as quickly as possible and will keep you updated on our progress.
 
 	   If you have any other questions or concerns, please don't hesitate to contact us.
 
@@ -159,7 +160,7 @@ Second Variant
 	  We apologize for any inconvenience this change may cause and thank you for your understanding.
 
 
-#off a customer
+# off a customer
 
     Hello [Name],
 
@@ -173,15 +174,42 @@ Second Variant
 
 # Access to shared mailbox granted
 
-# Ticket Closed (Survey Signature)
+	Dear [Name],
+
+	You have been granted access to the [name] shared mailbox. 
+	You will now be able to view, reply, and create emails from the shared mailbox. 
+	
+	If you have any questions or need assistance, please don't hesitate to contact us.
+	
+	Thank you,
+	[Name]
+
 
 # Approval Required
 
-# Approved Change - Processing
+	Dear Customer, 
 
-# Change Complete - TIcket Closed
+	Thank you for submitting your service request. We have received your request and are currently processing it. 
+
+	Please note that your request requires approval before we can proceed. We will contact you soon to discuss your request further. 
+
+	Thank you for your patience and understanding.
+
+	Sincerely, 
+	[Your Name]
 
 # Approval Denied
+
+	Dear [Name], 
+
+	Thank you for your request for service. Unfortunately, we are unable to fulfill your request at this time.
+	We regret to inform you that your request has been rejected. 
+	
+	We appreciate your understanding and apologize for any inconvenience this may have caused you. 
+	
+	Sincerely, 
+	[Name]
+
 
 # Granted Temporary Admin for software install
 
@@ -206,3 +234,9 @@ Second Variant
 # Ticket Action - Assign to me ; Set Status to In-progress
 
 # Review Response - Set Status from Responded to in-progress
+
+# Ticket Closed (Survey Signature)
+
+# Approved Change - Processing
+
+# Change Complete - TIcket Closed
