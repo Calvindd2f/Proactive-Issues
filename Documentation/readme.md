@@ -8,7 +8,7 @@ Formatting asside , it can be easily converted to HTML. Making storing and displ
 
 
 
-```markdown
+```plaintext
 ## Usage
 
 ```
