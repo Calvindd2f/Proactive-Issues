@@ -5,10 +5,9 @@ Formatting asside , it can be easily converted to HTML. Making storing and displ
 
 
 ### Sample
+*View below here as RAW not as it is displayed currently*
 
 
-
-```plaintext
 ## Usage
 
 ```
@@ -22,11 +21,11 @@ optional arguments:
   -u USER, --user USER  Username to login with
   -P PASSWORD, --password PASSWORD
                         Password to login with
-```plaintext
+```
 
 ## Example
 
-```plaintext
+```
 $ python3 client.py -s 127.0.0.1 -p 1337 -u test -P test
 [*] Connecting to 127.0.0.1:1337
 [*] Authenticating with username: test and password: test
@@ -38,7 +37,7 @@ server.py
 $ exit
 [*] Exiting
 ```
-```plaintext
+
 # Sample Markdown
 
 This is some basic, sample markdown.
@@ -63,7 +62,7 @@ var foo = 'bar';
 function baz(s) {
    return foo + ':' + s;
 }
-```plaintext
+```
 
 Or inline code like `var foo = 'bar';`.
 
@@ -72,4 +71,3 @@ Or an image of bears
 ![bears](http://placebear.com/200/200)
 
 The end ...
-```
