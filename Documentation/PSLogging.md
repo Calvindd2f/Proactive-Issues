@@ -40,6 +40,6 @@ Add-Logs "$env:LOGONSERVER is not cool"
 ```powershell
 PS C:\Users\c> cat .\log.txt
 
-[01:41:03] - EXIT is ass
-[01:41:03] - \\EXIT is not ass
+[01:41:03] - EXIT is cool
+[01:41:03] - \\EXIT is not cool
 ```
