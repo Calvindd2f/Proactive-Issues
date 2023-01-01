@@ -49,3 +49,9 @@ Import-Module -Name Posh-ACME
 Write-Verbose @" Displaying Sample
 New-PACertificate *.dread.ie -AcceptTOS -Contact <your-email> -DnsPlugin AcmeDns -PluginArgs @{ACMEServer='auth.acme-dns.io'} -Install
 @"
+
+
+
+$Trigger =New-ScheduledTaskTrigger -At 10:00am -Daily
+$Action= New-ScheduledTaskAction -Execute "PowerShell.exe" -Argument "C:\Cert\AutoRenewal.ps1"
+Register-ScheduledTask -TaskName "Certificate AutoRenewal" -Trigger $Trigger -User "$env:USERDOMAIN\$env:USERNAME" -Password '<password>' -Action $Action -RunLevel Highest –Force
