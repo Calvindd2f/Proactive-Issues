@@ -11,7 +11,8 @@ function CreateOU ([string]$name, [string]$path, [string]$description) {
         Write-Verbose "Creating new OU '$ouDN'"
         New-ADOrganizationalUnit -Name $name -Path $path -Description $description
     }
-}## #CreateOU -name "Groups" -path "DC=ad,DC=example,DC=com" -description "What a wonderful OU this is"
+}
+CreateOU -name "Groups" -path "DC=ad,DC=example,DC=com" -description "What a wonderful OU this is"
 
 
 # Find Disabled Users outside this OU ; then move them to the OU
@@ -48,7 +49,7 @@ Get-ADUser -Identity $ADUSER -Properties MemberOf | ForEach-Object {
   $_.MemberOf | Remove-ADGroupMember -Members $_.DistinguishedName -Confirm:$false
 }
 
-#Set description "Disabled - Date"
+# Set description "Disabled - Date"
 $Date = date
 $Detailed = $Date.ToShortDateString() + ' ' + $Date.ToShortTimeString() + ' By: ' + $env:USERDOMAIN + '\' + $env:USERNAME
 Set-ADUser -Description 'Disabled on $Detailed'
@@ -60,3 +61,5 @@ Get-ADUser -filter {Enabled -eq $false } | Foreach-object {
 
 # Check for ADSyncServer ; if it exists , Run a delta sync. If not, exit.
 Start-ADSyncSyncCycle -PolicyType Delta -Force -ErrorAction SilentlyContinue
+
+# Ending Comment
