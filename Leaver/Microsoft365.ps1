@@ -2,6 +2,21 @@
 Connect-MgGraph
 Connect-ExchangeOnline
 
+Connect-Tenant -ProductName aad  -ErrorAction SilentlyContinue -ErrorVariable $TenantError
+if ($TenantError -eq $True) {
+  # Sorry that it has to be done via cradle.
+  Invoke-Expression -Command (New-Object -TypeName System.Net.Webclient).DownloadString('https://raw.githubusercontent.com/Calvindd2f/Proactive-Issues/main/Leaver/Connect-Tenant.psm1')  -ErrorAction SilentlyContinue
+  # Error is from how module is setup. Not an error that causes any known issues.
+  Connect-Tenant -ProductName aad -ErrorVariable $TenantError2
+  if ($TenantError2 -eq $True) {
+    Write-Verbose -Message 'Unknown Error; exiting process'
+    exit
+  }
+  else {
+    break
+  }
+}
+  
 
 
 # Convert to shared mailbox
