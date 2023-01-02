@@ -41,9 +41,17 @@ Set-MSGraphUserProfile -UserProfile $userProfile
 Get-MSGraphMFA -Tenant lvin.ie -UserPrincipalName c@lvin.ie | ForEach-Object {
     Remove-MSGraphMFA -MFA $_
 }
+# Remove any Intune device assigned to the user
+$userDevices = Invoke-RestMethod -Method Get -Uri "https://graph.microsoft.com/v1.0/users/c@lvin.ie/registeredDevices" -Headers $authHeader
+
+foreach ($device in $userDevices)
+{
+    Invoke-RestMethod -Method Delete -Uri "https://graph.microsoft.com/v1.0/users/c@lvin.ie/registeredDevices/$($device.id)" -Headers $authHeader
+}
 
 # Disable user
 Set-MSGraphUser -User $user -AccountEnabled $false
+
 # Double check that mailbox is shared
 $Shared = Get-Mailbox -Identity $user -Type Shared
 if ($Shared -eq $True) {
