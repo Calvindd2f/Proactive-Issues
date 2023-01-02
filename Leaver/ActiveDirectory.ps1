@@ -14,7 +14,6 @@ function CreateOU ([string]$name, [string]$path, [string]$description) {
 }
 CreateOU -name "Groups" -path "DC=ad,DC=example,DC=com" -description "What a wonderful OU this is"
 
-
 # Find Disabled Users outside this OU ; then move them to the OU
 $moveToOU = "CN=OU Name,DC=doman,DC=com"
 
