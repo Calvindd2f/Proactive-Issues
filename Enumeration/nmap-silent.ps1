@@ -1,11 +1,11 @@
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 
-
-iwr https://github.com/Calvindd2f/Proactive-Issues/raw/main/Enumeration/Nmap.zip -OutFile $TMP
-irm https://github.com/Calvindd2f/Proactive-Issues/raw/main/Enumeration/Npcap.zip -OutFile $TMP
+iwr https://github.com/Calvindd2f/Proactive-Issues/raw/main/Enumeration/Nmap.zip -OutFile C:\Nmap.zip
+irm https://github.com/Calvindd2f/Proactive-Issues/raw/main/Enumeration/Npcap.zip -OutFile C:\Npcap.zip
 
 #1. Extract contents of nmap install to default folder
 Add-Type -AssemblyName 'System.IO.Compression.Filesystem' -ErrorAction SilentlyContinue
-$nmap_zip = "$TMP\Nmap.zip"
+$nmap_zip = "C:\Nmap.zip"
 
 $out_nmap = 'C:\Program Files (x86)\Nmap'
 mkdir $out_nmap
@@ -13,7 +13,7 @@ mkdir $out_nmap
 
 #2. Download and Execute NPAP Driver 1.71
 Add-Type -AssemblyName 'System.IO.Compression.Filesystem' -ErrorAction SilentlyContinue
-$pcap_zip = "$TMP\Npcap.zip"
+$pcap_zip = "C:\Npcap.zip"
 
 
 $out_pcap = 'C:\Program Files\Npcap'
